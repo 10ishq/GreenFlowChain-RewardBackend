@@ -20,6 +20,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/" ,  async(req,res) => {
+  res.send("Hello World")
+  })
+
 app.get("/addProduct", async (req, res) => {
   const { productHash, rewardAmount } = req.query;
 
