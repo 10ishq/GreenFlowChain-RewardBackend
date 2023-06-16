@@ -136,7 +136,7 @@ app.get("/redeemReward", async (req, res) => {
 });
 
 mongoose
-  .connect("mongodb+srv://reflowchain:reflowchain@reflowchain.r4hxsjs.mongodb.net/products?retryWrites=true&w=majority", {
+  .connect(process.env.MONGO, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
